@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}SecureGate | Secure Authentication Demo{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow">CYBERSECURITY INTERNSHIP PROJECT</div>
+  <h1>Security starts<br><span>at the front door.</span></h1>
+  <p class="lead">A simple authentication application demonstrating safer account handling, password hashing, and protected pages.</p>
+  <div class="actions">
+    <a class="button primary" href="{{ url_for('register') }}">Create an account</a>
+    <a class="button secondary" href="{{ url_for('login') }}">Log in</a>
+  </div>
+  <div class="feature-grid">
+    <article class="feature"><div class="icon">01</div><h3>Password hashing</h3><p>Passwords are stored as hashes, not readable text.</p></article>
+    <article class="feature"><div class="icon">02</div><h3>Safer database queries</h3><p>Parameterized SQL helps prevent injection.</p></article>
+    <article class="feature"><div class="icon">03</div><h3>Protected dashboard</h3><p>Only signed-in users can access the dashboard.</p></article>
+  </div>
+</section>
+{% endblock %}

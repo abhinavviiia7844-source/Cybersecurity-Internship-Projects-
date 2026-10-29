@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Dashboard | SecureGate{% endblock %}
+{% block content %}
+<section class="dashboard-head">
+  <div class="eyebrow">AUTHENTICATED SESSION</div>
+  <h1>Welcome, {{ username|e }}.</h1>
+  <p class="lead">You have successfully accessed a protected page.</p>
+</section>
+<div class="dashboard-grid">
+  <article class="stat-card"><span class="stat-icon">✓</span><h3>Signed in</h3><p>Your session is active.</p></article>
+  <article class="stat-card"><span class="stat-icon">🔒</span><h3>Password handling</h3><p>The app stores a password hash, not the original password.</p></article>
+  <article class="stat-card"><span class="stat-icon">SQL</span><h3>Parameterized queries</h3><p>Database inputs are passed separately from SQL statements.</p></article>
+</div>
+<div class="notice"><strong>Learning note:</strong> This demo shows core security practices, but it is not ready for production use. Review the README for limitations and next steps.</div>
+{% endblock %}

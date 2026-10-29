@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Log in | SecureGate{% endblock %}
+{% block content %}
+<section class="form-card">
+  <div class="eyebrow">WELCOME BACK</div><h1>Log in</h1>
+  <p class="muted">Enter the credentials you created for this local demo.</p>
+  <form method="post">
+    <label for="username">Username</label>
+    <input id="username" name="username" required autocomplete="username" placeholder="Your username">
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Your password">
+    <button class="button primary full" type="submit">Log in securely</button>
+  </form>
+  <p class="form-foot">New here? <a href="{{ url_for('register') }}">Create an account</a></p>
+</section>
+{% endblock %}
